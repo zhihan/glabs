@@ -9,17 +9,25 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.0'
     compile 'org.apache.httpcomponents:httpclient:4.3.6'
+    compile 'org.xerial:sqlite-jdbc:3.8.7'
+    compile 'org.xerial.thirdparty:nestedvm:1.0'
+
 
     testCompile "org.hamcrest:hamcrest-all:1.3"
     testCompile "junit:junit:4.11"
 }
 
-task runUtil(type:JavaExec) {
-   main = "me.zhihan.glabs.UtilMain"
-   classpath = sourceSets.main.runtimeClasspath
+task runUtilMain(type:JavaExec) {
+	main = "me.zhihan.glabs.UtilMain"
+	classpath = sourceSets.main.runtimeClasspath
 }
 
-task runClient(type:JavaExec) {
-   main = "me.zhihan.glabs.ClientMain"
+task runClientMain(type:JavaExec) {
+	main = "me.zhihan.glabs.ClientMain"
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+task runSQLiteMain(type:JavaExec) {
+   main = "me.zhihan.glabs.SQLiteMain"
    classpath = sourceSets.main.runtimeClasspath
 }

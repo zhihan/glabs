@@ -6,6 +6,7 @@ class Util {
 	}
 }
 
+
 class UtilMain {
 	static void main(String[] args) {
 		println(args)
