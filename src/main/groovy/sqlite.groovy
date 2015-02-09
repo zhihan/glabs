@@ -2,6 +2,7 @@ package me.zhihan.glabs
 
 import groovy.sql.Sql
 import org.sqlite.SQLite
+
 /** Simple wrapper over SQLite JDBC driver  */
 
 class SQLiteMain {
